@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Motivational Quotes</title>
+</head>
+<body>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
+
+    html,body{
+        display: flex;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        background-image: url("backg.jpg");
+    }
+    .container{
+        width: min(80%, 50rem);
+        padding: 2em;
+        background-color: white;
+        text-align: center;
+        border-radius: 20px;
+        margin: auto;
+    }
+
+    h1{
+        font-family: 'Poppins', sans-serif;
+        margin-top: 0;
+    }
+
+    button{
+        text-decoration: none;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        padding: 1em;
+        border-radius: 5px;
+        transition-duration: 0.4s;
+        
+    }
+
+    button:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+
+    p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 18px;
+    }
+</style>
+
+
+    <div class="container">
+        <h1>Motivational Quotes</h1>
+        <p id="result"></p>
+        <button id="select">Click Me!</button>
+    </div>
+
+
+
+
+<script>
+    var text = [
+  "We cannot solve problems with the kind of thinking we employed when we came up with them.",
+  "Learn as if you will live forever, live like you will die tomorrow.",
+  "Stay away from those people who try to disparage your ambitions. Small minds will always do that, but great minds will give you a feeling that you can become great too.",
+  "When you give joy to other people, you get more joy in return. You should give a good thought to happiness that you can give out.",
+  "When you change your thoughts, remember to also change your world.",
+  "It is only when we take chances, when our lives improve. The initial and the most difficult risk that we need to take is to become honest.",
+  "Nature has given us all the pieces required to achieve exceptional wellness and health, but has left it to us to put these pieces together."
+];
+
+    document.getElementById("select").onclick = function() {
+    document.getElementById("result").innerHTML = text[Math.floor(Math.random() * text.length)];
+}
+</script>
+
+
+</body>
+</html>
